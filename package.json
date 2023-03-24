@@ -1,0 +1,56 @@
+{
+  "name": "GPT Reactjs starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest --passWithNoTests",
+    "testCI": "CI=true vitest --passWithNoTests",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pretty": "prettier --write .",
+    "prettyCI": "prettier --write . && git add -u .",
+    "lint": "eslint . --ext .jsx",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "coverage": "vitest run --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint",
+      "npm run prettyCI",
+      "npm run testCI"
+    ]
+  },
+  "dependencies": {
+    "openai": "^3.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "eslint": "^8.35.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "jsdom": "^21.1.0",
+    "vite": "^4.1.0",
+    "@vitest/coverage-c8": "^0.28.5",
+    "vitest": "^0.28.5"
+  }
+}
