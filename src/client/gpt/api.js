@@ -13,7 +13,7 @@ const gptResponse = async (prompt) => {
       max_tokens: 3000,
     });
     const response = completion.data.choices[0].text;
-
+    console.log({response});
     return response;
   } catch (error) {
     throw new Error(error);

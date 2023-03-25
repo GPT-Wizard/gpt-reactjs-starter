@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+}
+
+.circle {
+  @apply w-2 h-2 mt-2 mx-1 bg-wave-blue rounded-full;
+}
+
+.large-circle {
+  @apply w-4 h-4 mt-2 mx-4 bg-wave-blue rounded-full;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  background-color: #edf1f3;
 }

@@ -1,19 +1,23 @@
-import gptResponse from "./api";
-import { purposeOfCampaignPrompt, targetAudiencePrompt } from "./promptEngine";
-import sanitize from "./sanitize";
+import gptResponse from './api';
+import { jokePrompt } from './promptEngine';
+import sanitize from './sanitize';
 
 const promptMap = {
-  PURPOSE: purposeOfCampaignPrompt,
-  TARGET_AUDIENCE: targetAudiencePrompt,
+  JOKE: jokePrompt,
 };
 
 const gptResponseBuilder = async (promptKey, promptOptions) => {
   const promptFunction = promptMap[promptKey];
   const prompt = await promptFunction(promptOptions);
 
+  console.log({prompt});
+
   const response = await gptResponse(prompt);
+
   const sanitizedResponse = sanitize(response);
+  console.log({sanitizedResponse});
   const parsedResponse = JSON.parse(sanitizedResponse);
+  console.log({parsedResponse});
 
   return parsedResponse;
 };
