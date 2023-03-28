@@ -1,9 +1,9 @@
 import gptResponse from './api';
-import { samplePrompt } from './promptEngine';
+import { recipePrompt } from './promptEngine';
 import sanitize from './sanitize';
 
 const promptMap = {
-  SAMPLE: samplePrompt,
+  RECIPE: recipePrompt,
 };
 
 const gptResponseBuilder = async (promptKey, promptOptions) => {

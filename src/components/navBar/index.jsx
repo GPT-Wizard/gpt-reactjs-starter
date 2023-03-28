@@ -4,7 +4,7 @@ import GithubLogo from '../../assets/images/github.svg';
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-wave-blue p-6">
+    <nav className="flex items-center absolute w-full justify-between flex-wrap bg-wave-blue p-6">
       <div className="container mx-auto flex items-center justify-between">
         <NavLink className="flex items-center text-white" to="/">
           <img src={Logo} alt="GPT template logo" className="h-8 w-8 mr-2" />
