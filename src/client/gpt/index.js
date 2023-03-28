@@ -1,10 +1,9 @@
-import gptResponse from "./api";
-import { purposeOfCampaignPrompt, targetAudiencePrompt } from "./promptEngine";
-import sanitize from "./sanitize";
+import gptResponse from './api';
+import { samplePrompt } from './promptEngine';
+import sanitize from './sanitize';
 
 const promptMap = {
-  PURPOSE: purposeOfCampaignPrompt,
-  TARGET_AUDIENCE: targetAudiencePrompt,
+  SAMPLE: samplePrompt,
 };
 
 const gptResponseBuilder = async (promptKey, promptOptions) => {
