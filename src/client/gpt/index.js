@@ -1,6 +1,6 @@
 import gptResponse from './api';
 import { recipePrompt } from './promptEngine';
-import sanitize from './sanitize';
+import { sanitize } from './promptHelper';
 
 const promptMap = {
   RECIPE: recipePrompt,
