@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
@@ -8,7 +8,7 @@ const gptResponse = async (prompt) => {
   try {
     const openai = new OpenAIApi(configuration);
     const completion = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: 'text-davinci-003',
       prompt,
       max_tokens: 3000,
     });

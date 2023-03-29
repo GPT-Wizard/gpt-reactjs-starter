@@ -7,25 +7,34 @@ This starter kit provides a simple and efficient way to build web applications t
 - Node JS (Version > 16.x)
 - OpenAI GPT-3 API Key ([Get one now!](https://platform.openai.com/account/api-keys))
 
-
 ### Traditional Installation
-1. Clone the project: 
+
+1. Clone the project:
+
 ```
 git clone https://github.com/GPT-Wizard/gpt-reactjs-starter.git
 ```
-2. Enter the project folder: 
+
+2. Enter the project folder:
+
 ```
 cd gpt-reactjs-starter
 ```
-3. Install dependencies: 
+
+3. Install dependencies:
+
 ```
 npm install
 ```
+
 4. Create an environment file (.env) and add:
+
 ```
 REACT_APP_OPENAI_API_KEY="Your OpenAI GPT-3 API Key"
 ```
-5. Run the application: 
+
+5. Run the application:
+
 ```
 npm run dev
 ```

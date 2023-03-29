@@ -1,6 +1,6 @@
 import gptResponse from './api';
 import { samplePrompt } from './promptEngine';
-import sanitize from './sanitize';
+import { sanitize } from './promptHelper';
 
 const promptMap = {
   SAMPLE: samplePrompt,
