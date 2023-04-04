@@ -14,7 +14,9 @@ function DishForm({ submit }) {
       onSubmit={handleSubmit}
     >
       <div className="flex justify-between">
-        <p className="text-2xl px-4 mb-6 text-wave-blue font-semibold">Recipe builder: Turn your cravings into reality</p>
+        <p className="text-2xl px-4 mb-6 text-wave-blue font-semibold">
+          Recipe builder: Turn your cravings into reality
+        </p>
       </div>
       <div className="flex flex-wrap w-[90%]">
         <label className="w-full" htmlFor="topic">

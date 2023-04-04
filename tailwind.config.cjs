@@ -27,6 +27,7 @@ module.exports = {
       transparent: 'rgb(0, 0, 0, 0)',
       white: '#ffffff',
       black: '#000000',
+      gray: '#9ca3af',
       'wave-blue': '#003d50',
       'mist-gray': '#edf1f3',
       'google-blue': '#4c8bf5',
